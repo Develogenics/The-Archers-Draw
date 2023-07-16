@@ -145,35 +145,21 @@
   
   /* 48em = 768px */
   
-  @media (min-width: 48em) {
-    .header li {
-      float: left;
-    }
-    .header li a {
-      padding: 20px 30px;
-    }
-    .header .menu {
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .header .menu-icon {
-      display: none;
-    }
-  }
+  
   
   .container {
       padding: 0;
     height: 100vh;
     overflow-x: hidden;
     position: static;
+    width: 100%;
   }
   
   .container img {
     width: 100%;
     position: absolute;
     height: 105vh;
-    object-fit: none;
+    object-fit: fill;
     z-index: -1;
     top: 75px;
   }
@@ -181,35 +167,52 @@
   
   .bg1 {
       transform: scale(1);
+      width: auto;
+      position: fixed;
+      left: 0;
+      object-fit: cover;
   }
   .girl {
-    transform: translateX(-55%) translateY(15%) scale(1.7) rotate(10deg);
-     
+    transform: translateX(-55%) translateY(20%) scale(0.6) rotate(10deg);
+    width: auto; /* Set width to auto */
+  height: auto; /* Set height to auto */
+  max-width: 100%; /* Add this line */
+  max-height: 100%; /* Add this line */
+  object-fit: contain;
   }
   
   .man {
-    transform: translateX(45%) translateY(-10%) scale(1.4) rotate(23deg);
-    right: 10%;
-    top: 10%;
-      
+    transform: translateX(45%) translateY(-40%) scale(0.5) rotate(23deg);
+   
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+    max-width: 100%; /* Add this line */
+    max-height: 100%; /* Add this line */
+    object-fit: contain;
   }
   
   .rock {
-    transform: translateX(0%) translateY(-10%);
-    left: 50%;
-    bottom: 10%;
+    transform: translateX(-20%) translateY(-28%) scale(1.5);
+    
     position: absolute;
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+    max-width: 100%; /* Add this line */
+    max-height: 100%; /* Add this line */
+    object-fit: contain;
   }
   
   .tree {
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 100%;
     /* Set max-width to prevent the tree from extending beyond the container */
-    height: auto;
     /* Allow image to adjust height while maintaining aspect ratio */
-    transform: translateX(45%) translateY(-40%);
+    width: auto; /* Set width to auto */
+    height: auto; /* Set height to auto */
+    max-width: 100%; /* Add this line */
+    max-height: 100%; /* Add this line */
+    transform: translateX(45%) translateY(-40%) scale(0.5);
     overflow-x: hidden;
   }
   
@@ -221,10 +224,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    /* Set width to 100% to prevent horizontal overflow */
-    height: auto;
-    /* Allow image to adjust height while maintaining aspect ratio */
+    
+   
   }
   
   .main-title {
@@ -329,5 +330,20 @@
     }    
   }
   
-  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
   
