@@ -158,7 +158,7 @@
   .container img {
     width: 100%;
     position: absolute;
-    height: 105vh;
+    height: 100vh;
     object-fit: fill;
     z-index: -1;
     top: 75px;
@@ -173,7 +173,7 @@
       object-fit: cover;
   }
   .girl {
-    transform: translateX(-55%) translateY(20%) scale(0.6) rotate(10deg);
+    transform: translateX(-55%) translateY(20%) scale(0.6) rotate(0deg);
     width: auto; /* Set width to auto */
   height: auto; /* Set height to auto */
   max-width: 100%; /* Add this line */
@@ -182,7 +182,7 @@
   }
   
   .man {
-    transform: translateX(45%) translateY(-40%) scale(0.5) rotate(23deg);
+    transform: translateX(45%) translateY(-40%) scale(0.5) rotate(100deg);
    
     width: auto; /* Set width to auto */
     height: auto; /* Set height to auto */
@@ -218,8 +218,8 @@
   
   
   
-  .girl,
-  .man,
+  .arrow1,
+  .arrow,
   .rock {
     position: absolute;
     top: 0;
